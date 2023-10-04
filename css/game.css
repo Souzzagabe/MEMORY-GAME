@@ -17,7 +17,7 @@
     transform-style: preserve-3d;
 }
 
-.card:hover {
+.reveal-card {
     transform: rotateY(180deg);
 }
 
@@ -29,10 +29,11 @@
     position: absolute;
     border: 3px solid rgb(170, 239, 170);
     border-radius: 5px;
+    transition: all 400ms ease;
 }
 
 .front {
-    background-image: url("../images/beth.png");
+    /* background-image: url("../images/beth.png"); */
     background-size: cover;
     background-position: center;
     transform: rotatey(180deg);
@@ -43,5 +44,10 @@
     background-size: cover;
     background-position: center;
     backface-visibility: hidden;
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
 }
 
