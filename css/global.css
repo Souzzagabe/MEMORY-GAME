@@ -11,3 +11,10 @@
   border: none;
   font-family: 'Press Start 2P', cursive;
 }
+
+
+@media (max-width: 600px) {
+  header {
+    font-size: 16px;
+  }
+}
