@@ -57,6 +57,22 @@ const checkCards = () => {
     }
 }
 
+const revealAllCards = () => {
+    const cards = document.querySelectorAll('.card')
+    
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('reveal-card')
+        }, index * 100)
+    });
+    
+    setTimeout(() => {
+        cards.forEach(card => {
+            card.classList.remove('reveal-card')
+        })
+    }, 3000)
+}
+
 const revealCard = ({ target }) => {
 
     if (target.parentNode.className.includes("reveal-card")) {
@@ -114,9 +130,16 @@ const startTimer = () => {
 }
 
 window.onload = () => {
-    spanPlayer.innerHTML = localStorage.getItem("player")
+    spanPlayer.innerHTML = localStorage.getItem("player");
 
-    startTimer()
-    loadGame()
+    loadGame();
+    
+    setTimeout(() => {
+        revealAllCards()
+    }, 1000)
+    
+    setTimeout(() => {
+        startTimer()
+    }, 3000)
+    
 }
-
