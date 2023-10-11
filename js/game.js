@@ -89,7 +89,6 @@ const revealCard = ({ target }) => {
 
         checkCards()
     }
-
 }
 
 const createCard = (charater) => {
