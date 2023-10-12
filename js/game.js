@@ -117,7 +117,6 @@ const loadGame = () => {
 
         const card = createCard(charater)
         grid.appendChild(card)
-
     })
 }
 
@@ -140,5 +139,4 @@ window.onload = () => {
     setTimeout(() => {
         startTimer()
     }, 3000)
-    
 }
